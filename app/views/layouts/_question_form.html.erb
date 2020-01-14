@@ -1,0 +1,7 @@
+<%= render "layouts/errors", :object => @question %>
+
+<%= form_for [@survey, @question] do |f| %>
+  <%= f.label :query %>
+  <%= f.text_field :query %>
+  <%= f.submit %>
+<% end %>
