@@ -9,6 +9,7 @@ class QuestionsController < ApplicationController
     @survey = Survey.find(params[:survey_id])
     @question = @survey.questions.new(question_params)
     if @question.save
+      flash[:notice] = "Questiong successfully added!"
       redirect_to survey_path(@survey)
     else
       render :new

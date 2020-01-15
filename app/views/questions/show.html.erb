@@ -1,7 +1,6 @@
 <h1>Survey: <%= @survey.title %></h1>
 <h2>Question: <%= @question.query %></h2>
 
-
 <p><%= link_to "Edit question", edit_survey_question_path(@survey, @question) %></p>
 <p><%= link_to "Delete question", survey_question_path(@survey, @question),
                         :data => {:confirm => "Are you sure?",
